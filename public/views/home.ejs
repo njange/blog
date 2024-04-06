@@ -18,7 +18,12 @@
     </form>
 
     <!-- Display existing posts -->
-    <!-- You can add code to display existing posts here -->
+    <% posts.forEach(post => { %>
+        <div>
+            <p><%= post.content %></p>
+            <a href="/delete/<%= post.id %>">Delete</a>
+        </div>
+    <% }) %>
 
 </body>
 </html>
